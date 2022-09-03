@@ -1,0 +1,155 @@
+:root{
+    --negro:#181719;
+    --blanco:#fff;
+    --fuente:'Poppins', sans-serif;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--negro);
+    font-family: var(--fuente);
+}
+img{
+    width:100%;
+    object-fit: cover;
+    display:block;
+}
+h1,h2,h3,p,a,ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.container{
+    max-width:1200px;
+    margin: 0 auto;
+    width:90%;
+}
+.header{
+    height:100vh;
+    display:grid;
+    grid-template-rows:auto 1fr;
+}
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 0;
+}
+.logo{
+    color:var(--blanco);
+    border:.1rem solid var(--blanco);
+    padding:.3rem;
+}
+.ul{
+    display:none;
+    flex-direction:column;
+    gap:1rem;
+}
+.link{
+    color:var(--blanco);
+}
+.link__line{
+    border-bottom: .1rem solid var(--blanco);
+}
+.btn{
+    display:flex;
+    max-width:10rem;
+    gap:.5rem;
+}
+.bx-arrow-back{
+    transform: rotate(180deg);
+    font-size:1.5rem;
+}
+.bx-menu,.bx-x{
+    font-size:1.8rem;
+}
+.add{
+    position: fixed;
+    height:100vh;
+    width:100%;
+    top: 0;
+    left:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    z-index:1;
+}
+.menu{
+    z-index:1;
+}
+.hero{
+    display: grid;
+    align-items:center;
+    gap:2rem;
+}
+.heading{
+    color:var(--blanco);
+    font-size:4rem;
+}
+.parrafo{
+    color: var(--blanco);
+    font-size:1.1rem;
+    opacity:.7;
+    margin:2rem 0;
+}
+.hero__image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.hero__coment{
+    position: absolute;
+    background: var(--negro);
+    bottom:-7rem;
+    padding:1rem;
+    box-shadow:0px 0px 4px .8px #000;
+}
+.coment__image{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    padding-bottom:1rem;
+    align-items: center;
+}
+.coment__img{
+    border-radius:50%;
+    overflow: hidden;
+    width:3rem ;
+    height:3rem;
+}
+.nombre{
+    color: var(--blanco);
+    padding-bottom:.2rem;
+}
+.texto{
+    color: var(--blanco);
+}
+@media(min-width:768px){
+    .add{
+        background: unset;
+        position:unset;
+        height:unset;
+        width: unset;
+    }
+    .ul{
+        display: flex;
+        flex-direction:row;
+    }
+    .menu{
+        display: none;
+    }
+    .hero{
+        grid-template-columns:1fr 1fr;
+    }
+    .hero__text{
+        max-width:35rem;
+    }
+    .hero__coment{
+        right:1rem;
+    }
+}
